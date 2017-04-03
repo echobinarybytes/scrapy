@@ -53,7 +53,7 @@ import MySQLdb
 #import MySQLdb.cursors
 class Sina01Pipeline(object):
     def process_item(self, item, spider):
-        conn = MySQLdb.connect(host='localhost', user='root', passwd='huangxin19960828', db='film',charset = "utf8")  # 连接数据库
+        conn = MySQLdb.connect(host='localhost', user='root', passwd='passwd', db='film',charset = "utf8")  # 连接数据库
         cursor = conn.cursor()
         sql = "insert into sina(title,content,time) values(%s,%s,%s)"
 #cur.execute('create table activecode(id int,name varchar(20))')  # 创建数据表
